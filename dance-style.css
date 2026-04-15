@@ -1,0 +1,250 @@
+/* Kate Bethers — Dance Teaching Custom Stylesheet */
+/* Linked from dance-scratch.html only (no Bootstrap on this page) */
+
+/* ── Variables ── */
+:root {
+  --pink:      #b5477a;
+  --dark-pink: #7c2d5e;
+  --deep:      #4a1a3a;
+  --gold:      #d4af37;
+  --cream:     #fdf8fb;
+  --dark:      #1e1e2e;
+  --text:      #2b2b2b;
+  --muted:     #666;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--dark);
+  background-image:
+    radial-gradient(ellipse at 15% 30%, rgba(181,71,122,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 70%, rgba(212,175,55,0.08) 0%, transparent 50%);
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* ── Navigation ── */
+nav {
+  background: rgba(30,30,46,0.96);
+  border-bottom: 2px solid var(--pink);
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav .logo {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+nav ul li a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+nav ul li a:hover { color: #fff; }
+
+/* ── Hero Div ── */
+#hero {
+  text-align: center;
+  padding: 90px 20px 70px;
+  border-bottom: 1px solid rgba(181,71,122,0.25);
+}
+#hero h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 24px rgba(212,175,55,0.25);
+}
+#hero .tagline {
+  font-family: 'Arial', sans-serif;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+#hero img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 10px;
+  border: 3px solid var(--pink);
+  box-shadow: 0 10px 50px rgba(181,71,122,0.25);
+  margin-top: 30px;
+}
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ── Buttons ── */
+.btn-pink {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-pink:hover { background: var(--dark-pink); transform: translateY(-2px); }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  padding: 11px 30px;
+  border-radius: 999px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-outline:hover { background: var(--gold); color: var(--dark); transform: translateY(-2px); }
+
+/* ── Main Content Div ── */
+#main-content {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 55px 30px;
+}
+#main-content h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.9rem;
+  color: var(--pink);
+  border-bottom: 1px solid rgba(181,71,122,0.3);
+  padding-bottom: 10px;
+  margin: 52px 0 18px;
+}
+#main-content p {
+  font-family: 'Georgia', serif;
+  font-size: 1.03rem;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+
+/* ── Dance Styles Div ── */
+#dance-styles {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(181,71,122,0.22);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin: 36px 0;
+}
+#dance-styles h2 {
+  color: var(--gold);
+  margin-top: 0;
+  border-bottom-color: rgba(212,175,55,0.2);
+}
+
+/* ── Lists ── */
+ol {
+  font-family: 'Arial', sans-serif;
+  color: #ddd;
+  font-size: 0.97rem;
+  line-height: 1.9;
+  padding-left: 20px;
+}
+ol li { margin-bottom: 10px; }
+ol li strong { color: #fff; }
+
+ul.sub-list {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: rgba(249,168,212,0.85);
+  font-size: 0.92rem;
+  list-style: disc;
+  padding-left: 22px;
+  margin-top: 6px;
+  line-height: 1.8;
+}
+
+/* ── Video Section Div ── */
+#video-section {
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  padding: 40px 30px;
+  margin: 36px 0;
+  text-align: center;
+}
+#video-section h2 { color: var(--pink); margin-top: 0; border: none; text-align: left; }
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; overflow: hidden;
+  max-width: 720px;
+  margin: 20px auto 0;
+  border-radius: 8px;
+  border: 2px solid var(--pink);
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* ── Tableau Section ── */
+#tableau-section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 12px;
+  padding: 36px 36px;
+  margin: 36px 0;
+  text-align: center;
+}
+#tableau-section h2 { color: var(--gold); margin-top: 0; border: none; text-align: left; }
+#tableau-section p { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: #999; }
+
+/* ── Font color style ── */
+.highlight-text  { color: var(--gold); }
+.muted-text      { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+
+/* ── Font family style ── */
+.sans-text { font-family: 'Arial', sans-serif; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 28px;
+  border-top: 1px solid rgba(181,71,122,0.2);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 40px;
+}
+footer a { color: var(--pink); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media(max-width:600px){
+  nav { padding: 12px 18px; }
+  nav ul { gap: 14px; }
+  #main-content { padding: 40px 18px; }
+  #dance-styles { padding: 24px 20px; }
+}
